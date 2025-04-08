@@ -1,0 +1,22 @@
+{
+  "tarefas": [
+    {
+      "id": 1,
+      "titulo": "Cuidar do bob(cachorro)",
+      "descricao:": "Alimentar o bob pela manhã, depois banhar, as 17hr passear com ele. ",
+      "concluida:": false
+    },
+    {
+      "id": 1,
+      "titulo": "Esvaziar a lixeira",
+      "descricao:": "Se acordar 7hr para esvaziar a lixeira",
+      "concluida:": true
+    },
+    {
+      "id": 1,
+      "titulo": "Arrumar a casa",
+      "descricao:": "Arrumar a casa pela manhã",
+      "concluida:": true
+    }
+  ]
+}
