@@ -7,16 +7,22 @@
       "concluida:": false
     },
     {
-      "id": 1,
+      "id": 2,
       "titulo": "Esvaziar a lixeira",
       "descricao:": "Se acordar 7hr para esvaziar a lixeira",
       "concluida:": true
     },
     {
-      "id": 1,
+      "id": 3,
       "titulo": "Arrumar a casa",
       "descricao:": "Arrumar a casa pela manhã",
       "concluida:": true
+    },
+    {
+      "id": 4,
+      "titulo": "lavar roupa",
+      "descricao": "separar as roupas escuras das brancas",
+      "concluida": false
     }
   ]
 }
