@@ -18,4 +18,3 @@ export const lerArquivoJSON = async function () {
     console.log("erro ao ler o arquivo", erro.message);
   }
 };
-console.log(await lerArquivoJSON());

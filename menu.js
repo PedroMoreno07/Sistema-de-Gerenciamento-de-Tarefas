@@ -1,8 +1,13 @@
 import { lerArquivoJSON, escreverArquivoJSON } from "./lerEescrever.js";
+import { criarNovaTarefa } from "./criar-nova-tarefa.js";
+import {
+  visualizarTarefaTrue,
+  visualizarTarefaFalse,
+} from "./filtrar-tarefas.js";
+import { concluirTarefas } from "./concluirTarefas.js";
 import promptSync from "prompt-sync";
 const prompt = promptSync();
 let permicao = false;
-const listaTarefas = { ...(await lerArquivoJSON()) };
 do {
   console.log(`
     MENU INTERATIVO DAS TAREFAS
@@ -18,32 +23,23 @@ do {
   );
   switch (pergunta) {
     case 1:
-      const novaTarefa = {
-        id: null,
-        titulo: "",
-        descricao: "",
-        concluida: false,
-      };
-      const tarefaTitulo = prompt("Digite o titulo da tarefa: ");
-      const tarefaDesc = prompt("Digite a descrição da tarefa: ");
-      novaTarefa.titulo = tarefaTitulo;
-      novaTarefa.descricao = tarefaDesc;
-      novaTarefa.id = listaTarefas.tarefas.length + 1;
-      listaTarefas.tarefas.push(novaTarefa);
-      const dados = listaTarefas;
-      await escreverArquivoJSON(dados);
+      await criarNovaTarefa();
       break;
     case 2:
-      await lerArquivoJSON();
+      console.log(await lerArquivoJSON());
       break;
     case 3:
-
+      await visualizarTarefaTrue();
+      break;
     case 4:
-
+      await visualizarTarefaFalse();
+      break;
     case 5:
-
+      await concluirTarefas();
+      break;
     case 6:
       permicao = true;
+      break;
     default:
       break;
   }
